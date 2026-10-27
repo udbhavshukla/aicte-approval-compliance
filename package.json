@@ -1,0 +1,27 @@
+{
+  "name": "sih-aicte-compliance-alerts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Member 4 — deterministic compliance and alerts module for the SIH AICTE approval workflow prototype.",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "npm run dev -w @sih-aicte/backend",
+    "dev:frontend": "npm run dev -w @sih-aicte/frontend",
+    "start:backend": "npm run start -w @sih-aicte/backend",
+    "preview:frontend": "npm run preview -w @sih-aicte/frontend",
+    "build": "npm run build -w @sih-aicte/backend && npm run build -w @sih-aicte/frontend",
+    "test": "npm run test -w @sih-aicte/backend && npm run test -w @sih-aicte/frontend",
+    "typecheck": "npm run typecheck -w @sih-aicte/backend && npm run typecheck -w @sih-aicte/frontend",
+    "check": "npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
