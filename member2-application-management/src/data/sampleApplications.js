@@ -1,0 +1,53 @@
+// Local sample data. Field names match the shared JSON format exactly.
+const DOCS = ["Institution Details", "Required Certificates", "Supporting Documents"];
+
+export const SAMPLE_APPLICATIONS = [
+  {
+    id: "APP101",
+    collegeName: "Demo Engineering College",
+    type: "Engineering",
+    description: "Application for approval",
+    submissionDate: "2026-10-27",
+    dueDate: "2026-10-30",
+    requiredDocuments: DOCS,
+    submittedDocuments: ["Institution Details", "Required Certificates"],
+    status: "Under Review",
+    assignedOfficer: "Officer A",
+  },
+  {
+    id: "APP102",
+    collegeName: "Sunrise Institute of Management",
+    type: "Management",
+    description: "New management programme approval request",
+    submissionDate: "2026-10-20",
+    dueDate: "2026-10-25",
+    requiredDocuments: DOCS,
+    submittedDocuments: ["Institution Details"],
+    status: "Action Required",
+    assignedOfficer: "Officer B",
+  },
+  {
+    id: "APP103",
+    collegeName: "Lakeview Technical Campus",
+    type: "Approval Renewal",
+    description: "Annual approval renewal",
+    submissionDate: "2026-10-15",
+    dueDate: "2026-11-10",
+    requiredDocuments: DOCS,
+    submittedDocuments: [...DOCS],
+    status: "Approved",
+    assignedOfficer: "Officer C",
+  },
+  {
+    id: "APP104",
+    collegeName: "Hillcrest College of Engineering",
+    type: "Engineering",
+    description: "Intake increase request",
+    submissionDate: "2026-10-26",
+    dueDate: "2026-11-05",
+    requiredDocuments: DOCS,
+    submittedDocuments: [...DOCS],
+    status: "Submitted",
+    assignedOfficer: null,
+  },
+];
